@@ -40,8 +40,7 @@ func UploadHandler(c *gin.Context) {
 		return
 	}
 
-	// ※ここでSupabase Storage APIなどを呼び出し、実際のアップロードを行い、URLを取得する処理を実装してください
-	uploadedFileURL := "https://your-supabase-storage-url/" + tempFileName
+	// ※ここでSupabase Storage API などを呼び出し、実際のアップロードを行い、URLを取得する処理を実装してください
 
 	// DBへファイルメタデータを登録する（ここでは疑似的にUUIDを生成）
 	fileID := uuid.New().String()

@@ -8,14 +8,14 @@ RUN apk add --no-cache git
 WORKDIR /app
 
 # Goモジュールファイルをコピーして依存関係をダウンロード
-COPY go.mod go.sum ./
-RUN go mod download
+# COPY go.mod go.sum ./
+# RUN go mod download
 
 # ソースコード全体をコピー
 COPY . .
 
 # アプリケーションのビルド
-RUN go build -o main .
+# RUN go build -o main .
 
 # コンテナ起動時のコマンド
 CMD ["/app/main"]

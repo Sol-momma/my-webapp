@@ -22,7 +22,7 @@ const UploadPage: React.FC = () => {
     formData.append("file", selectedFile);
 
     try {
-      const response = await fetch("/api/upload", {
+      const response = await fetch("http://localhost:8080/upload", {
         method: "POST",
         body: formData,
       });
